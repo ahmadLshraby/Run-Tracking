@@ -14,6 +14,7 @@
 		04C4CEE72226449700371510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CEE62226449700371510 /* Assets.xcassets */; };
 		04C4CEEA2226449700371510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C4CEE82226449700371510 /* LaunchScreen.storyboard */; };
 		04C4CEF722266D1900371510 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CEF622266D1900371510 /* CurrentRunVC.swift */; };
+		04C4CEF92226706400371510 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CEF82226706400371510 /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04C4CEE92226449700371510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C4CEEB2226449700371510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C4CEF622266D1900371510 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
+		04C4CEF82226706400371510 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		04C4CEF1222644C000371510 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04C4CEF82226706400371510 /* LocationVC.swift */,
 				04C4CEDF2226449700371510 /* BeginRunVC.swift */,
 				04C4CEE12226449700371510 /* RunLogVC.swift */,
 				04C4CEF622266D1900371510 /* CurrentRunVC.swift */,
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C4CEF92226706400371510 /* LocationVC.swift in Sources */,
 				04C4CEE22226449700371510 /* RunLogVC.swift in Sources */,
 				04C4CEDE2226449700371510 /* AppDelegate.swift in Sources */,
 				04C4CEF722266D1900371510 /* CurrentRunVC.swift in Sources */,
