@@ -22,16 +22,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-CA-LIT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="mty-i4-2PA"/>
+                                    <constraint firstAttribute="height" constant="50" id="mty-i4-2PA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-IB-Exg">
-                                <rect key="frame" x="0.0" y="70" width="375" height="428"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="420"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JyZ-qq-bti">
                                 <rect key="frame" x="127.5" y="508" width="120" height="100"/>
@@ -62,7 +62,11 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cF-r6-URp">
-                                <rect key="frame" x="301" y="419" width="58" height="58"/>
+                                <rect key="frame" x="299" y="419" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="PAm-bs-80F"/>
+                                    <constraint firstAttribute="width" constant="60" id="WdX-Yb-3pT"/>
+                                </constraints>
                                 <state key="normal" image="centerNavButton"/>
                             </button>
                         </subviews>
@@ -79,7 +83,7 @@
                             <constraint firstItem="rbB-IB-Exg" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="MNn-bj-feF"/>
                             <constraint firstItem="JyZ-qq-bti" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Mmd-M4-o3M"/>
                             <constraint firstItem="9cF-r6-URp" firstAttribute="top" secondItem="rbB-IB-Exg" secondAttribute="bottom" constant="-79" id="UIM-Nx-dK5"/>
-                            <constraint firstItem="HMh-CA-LIT" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Wgd-D1-xTf"/>
+                            <constraint firstItem="HMh-CA-LIT" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="8" id="WSM-Bt-ChO"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="JyZ-qq-bti" secondAttribute="bottom" constant="10" id="ZA7-pj-h6x"/>
                             <constraint firstAttribute="bottom" secondItem="OOE-W3-QQ1" secondAttribute="bottom" id="hpz-RP-QbI"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="9cF-r6-URp" secondAttribute="trailing" constant="16" id="ogj-Ef-HbU"/>
@@ -95,21 +99,131 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--My Log-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Run_Tracking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="RunLogVC" customModule="Run_Tracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="ZMq-45-IyS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZH1-Hg-Vl8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SMR-Jq-h8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-1s-y4J">
+                                <rect key="frame" x="0.0" y="78" width="375" height="540"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RunLogCell" rowHeight="70" id="wUw-Fo-Pj5">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wUw-Fo-Pj5" id="EsP-7b-CP8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gs2-aS-U0t">
+                                                    <rect key="frame" x="15" y="17.5" width="72.5" height="35"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxz-St-nNN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="72.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2 mi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-TS-FzY">
+                                                            <rect key="frame" x="0.0" y="17.5" width="72.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Kxz-St-nNN" firstAttribute="centerX" secondItem="gs2-aS-U0t" secondAttribute="centerX" id="CqM-Mq-BtW"/>
+                                                        <constraint firstItem="sF3-TS-FzY" firstAttribute="centerX" secondItem="gs2-aS-U0t" secondAttribute="centerX" id="Fuj-EN-aks"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1Rw-Db-Jbl">
+                                                    <rect key="frame" x="157.5" y="16.5" width="60.5" height="37.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zf-ay-hSZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60.5" height="23.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/mi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyq-9C-ihf">
+                                                            <rect key="frame" x="0.0" y="23.5" width="60.5" height="14"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Tyq-9C-ihf" firstAttribute="centerX" secondItem="1Rw-Db-Jbl" secondAttribute="centerX" id="FeH-1Y-I1d"/>
+                                                        <constraint firstItem="0zf-ay-hSZ" firstAttribute="centerX" secondItem="1Rw-Db-Jbl" secondAttribute="centerX" id="NMc-OD-rT3"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06/15/17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13L-Xs-IIN">
+                                                    <rect key="frame" x="302" y="28" width="58" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-LO-VFp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="gs2-aS-U0t" firstAttribute="centerY" secondItem="EsP-7b-CP8" secondAttribute="centerY" id="AJT-Il-ibk"/>
+                                                <constraint firstAttribute="trailing" secondItem="d7y-LO-VFp" secondAttribute="trailing" id="F9U-7t-wuR"/>
+                                                <constraint firstItem="gs2-aS-U0t" firstAttribute="leading" secondItem="EsP-7b-CP8" secondAttribute="leadingMargin" id="Qd2-oS-ogr"/>
+                                                <constraint firstItem="d7y-LO-VFp" firstAttribute="top" secondItem="EsP-7b-CP8" secondAttribute="top" id="SwK-Vl-WHf"/>
+                                                <constraint firstItem="13L-Xs-IIN" firstAttribute="centerY" secondItem="EsP-7b-CP8" secondAttribute="centerY" id="Y1S-jI-qEv"/>
+                                                <constraint firstAttribute="bottom" secondItem="d7y-LO-VFp" secondAttribute="bottom" id="ZTj-wS-jjx"/>
+                                                <constraint firstItem="1Rw-Db-Jbl" firstAttribute="centerY" secondItem="EsP-7b-CP8" secondAttribute="centerY" id="eeS-RV-WUh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="13L-Xs-IIN" secondAttribute="trailing" id="nFu-ZQ-VIx"/>
+                                                <constraint firstItem="d7y-LO-VFp" firstAttribute="leading" secondItem="EsP-7b-CP8" secondAttribute="leading" id="qmp-cf-4th"/>
+                                                <constraint firstItem="1Rw-Db-Jbl" firstAttribute="centerX" secondItem="EsP-7b-CP8" secondAttribute="centerX" id="yim-KO-fGq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZH1-Hg-Vl8" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="1xH-aW-ZQo"/>
+                            <constraint firstItem="ZMq-45-IyS" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="45C-XU-P9V"/>
+                            <constraint firstItem="ZH1-Hg-Vl8" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="8" id="9P9-90-F0U"/>
+                            <constraint firstItem="ZMq-45-IyS" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="MY3-uK-Jqh"/>
+                            <constraint firstItem="GxD-1s-y4J" firstAttribute="top" secondItem="ZH1-Hg-Vl8" secondAttribute="bottom" id="PR7-tF-dKP"/>
+                            <constraint firstItem="GxD-1s-y4J" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="bsT-yp-Yu5"/>
+                            <constraint firstItem="ZMq-45-IyS" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="cqR-JO-AGc"/>
+                            <constraint firstItem="GxD-1s-y4J" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="etT-p0-bgv"/>
+                            <constraint firstItem="GxD-1s-y4J" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="gtU-s0-w6w"/>
+                            <constraint firstItem="ZH1-Hg-Vl8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="jzw-zD-fwx"/>
+                            <constraint firstAttribute="bottom" secondItem="ZMq-45-IyS" secondAttribute="bottom" id="nKY-9L-iZv"/>
+                            <constraint firstItem="ZH1-Hg-Vl8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="O1u-W8-tvY" secondAttribute="leading" id="vA7-3R-ubc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="My Log" image="tabbar-myLogIconGray" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -133,8 +247,8 @@
     <resources>
         <image name="BG" width="375" height="667"/>
         <image name="centerNavButton" width="58" height="58"/>
-        <image name="second" width="30" height="30"/>
         <image name="startRunningButton" width="71" height="71"/>
+        <image name="tabbar-myLogIconGray" width="25" height="25"/>
         <image name="tabbar-runIconGray" width="27" height="28"/>
     </resources>
 </document>
