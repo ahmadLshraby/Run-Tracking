@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import MapKit
 
 class CurrentRunVC: LocationVC {
 
     @IBOutlet weak var swipeBGImage: UIImageView!
     @IBOutlet weak var sliderImage: UIImageView!
+    @IBOutlet weak var durationLbl: UILabel!
+    @IBOutlet weak var paceLbl: UILabel!
+    @IBOutlet weak var distanceLbl: UILabel!
+    @IBOutlet weak var pauseBtn: UIButton!
+    
+    var firstLocation: CLLocation!
+    var lastLocation: CLLocation!
+    
+    var runDistance: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +30,24 @@ class CurrentRunVC: LocationVC {
         sliderImage.addGestureRecognizer(swipeGesture)
         sliderImage.isUserInteractionEnabled = true
         swipeGesture.delegate = self as? UIGestureRecognizerDelegate
+    }
+    
+    // let manager works in every time view will appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationManager?.delegate = self
+        locationManager?.distanceFilter = 10   // min distance by meter
+        startRun()
+    }
+    
+    func startRun() {
+        locationManager?.startUpdatingLocation()
+    }
+    func endRun() {
+        locationManager?.stopUpdatingLocation()
+    }
+
+    @IBAction func pauseBtn(_ sender: UIButton) {
     }
     
     @objc func endRunSwiped(sender: UIPanGestureRecognizer) {
@@ -49,4 +77,24 @@ class CurrentRunVC: LocationVC {
 
 
 
+}
+
+
+extension CurrentRunVC: CLLocationManagerDelegate {
+    // when allow authorization we center the map
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            checkLocationAuthStatus()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if firstLocation == nil {
+            firstLocation = locations.first
+        }else if let location = locations.last {
+            runDistance += lastLocation.distance(from: location)
+            distanceLbl.text = "\(runDistance)"
+        }
+        lastLocation = locations.last
+    }
 }
