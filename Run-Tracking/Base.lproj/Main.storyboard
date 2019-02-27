@@ -134,52 +134,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L6c-uK-mnH">
-                                <rect key="frame" x="8" y="229" width="359" height="98"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Pace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LPX-Dv-jPg">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9do-gc-RAB">
-                                        <rect key="frame" x="0.0" y="28.5" width="359" height="41"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="35"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/mi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="o0U-aG-cZ7">
-                                        <rect key="frame" x="0.0" y="74.5" width="359" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ev6-VC-Zvs">
-                                <rect key="frame" x="8" y="408" width="359" height="92"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gcW-zk-6p4">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZA-LP-UXd">
-                                        <rect key="frame" x="0.0" y="28.5" width="359" height="35"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-L7-s2G">
-                                        <rect key="frame" x="0.0" y="68.5" width="359" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="NwL-yC-D3A">
                                 <rect key="frame" x="127.5" y="98" width="120.5" height="50"/>
                                 <constraints>
@@ -240,6 +194,29 @@
                                     <constraint firstItem="Ujt-qp-NG9" firstAttribute="leading" secondItem="61W-hi-EeI" secondAttribute="trailing" constant="-26" id="w05-Rs-zoo"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ev6-VC-Zvs">
+                                <rect key="frame" x="8" y="235" width="359" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gcW-zk-6p4">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZA-LP-UXd">
+                                        <rect key="frame" x="0.0" y="28.5" width="359" height="35"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-L7-s2G">
+                                        <rect key="frame" x="0.0" y="68.5" width="359" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -249,23 +226,18 @@
                             <constraint firstItem="Vhv-P6-BvR" firstAttribute="top" secondItem="lSr-99-LRc" secondAttribute="topMargin" constant="8" id="FC0-vH-TaV"/>
                             <constraint firstItem="Vhv-P6-BvR" firstAttribute="centerX" secondItem="lSr-99-LRc" secondAttribute="centerX" id="GKm-Zs-HIi"/>
                             <constraint firstItem="2ju-YP-q79" firstAttribute="leading" secondItem="QjY-Zr-30H" secondAttribute="leading" id="KZX-5I-z3S"/>
-                            <constraint firstItem="L6c-uK-mnH" firstAttribute="centerY" secondItem="2ju-YP-q79" secondAttribute="centerY" id="Mk9-OQ-mw5"/>
                             <constraint firstItem="sae-xJ-Apo" firstAttribute="centerX" secondItem="lSr-99-LRc" secondAttribute="centerX" id="PJV-NH-RKr"/>
                             <constraint firstItem="QjY-Zr-30H" firstAttribute="trailing" secondItem="V8x-Zk-Qbc" secondAttribute="trailing" id="QBC-Ur-peK"/>
                             <constraint firstItem="V8x-Zk-Qbc" firstAttribute="leading" secondItem="QjY-Zr-30H" secondAttribute="leading" id="Vcf-MD-sfI"/>
                             <constraint firstItem="2ju-YP-q79" firstAttribute="trailing" secondItem="QjY-Zr-30H" secondAttribute="trailing" id="XR0-1J-3Zp"/>
-                            <constraint firstItem="ev6-VC-Zvs" firstAttribute="top" secondItem="2ju-YP-q79" secondAttribute="bottom" constant="30" id="eyo-LK-dLT"/>
+                            <constraint firstItem="ev6-VC-Zvs" firstAttribute="top" secondItem="2ju-YP-q79" secondAttribute="bottom" constant="-143" id="eyo-LK-dLT"/>
                             <constraint firstItem="QjY-Zr-30H" firstAttribute="trailing" secondItem="ev6-VC-Zvs" secondAttribute="trailing" constant="8" id="hoq-nW-Q0O"/>
-                            <constraint firstItem="L6c-uK-mnH" firstAttribute="centerX" secondItem="lSr-99-LRc" secondAttribute="centerX" id="ig9-c7-zuR"/>
                             <constraint firstItem="2ju-YP-q79" firstAttribute="top" secondItem="NwL-yC-D3A" secondAttribute="bottom" constant="30" id="kWo-oE-bMj"/>
                             <constraint firstItem="NwL-yC-D3A" firstAttribute="top" secondItem="Vhv-P6-BvR" secondAttribute="bottom" constant="20" id="mCQ-mj-Jhx"/>
-                            <constraint firstItem="QjY-Zr-30H" firstAttribute="trailing" secondItem="L6c-uK-mnH" secondAttribute="trailing" constant="8" id="mO2-pr-rlU"/>
                             <constraint firstItem="ev6-VC-Zvs" firstAttribute="centerX" secondItem="lSr-99-LRc" secondAttribute="centerX" id="qno-Pi-o2u"/>
-                            <constraint firstItem="L6c-uK-mnH" firstAttribute="leading" secondItem="QjY-Zr-30H" secondAttribute="leading" constant="8" id="qo5-i1-sCf"/>
                             <constraint firstItem="NwL-yC-D3A" firstAttribute="centerX" secondItem="lSr-99-LRc" secondAttribute="centerX" id="qpN-Ti-Nyj"/>
                             <constraint firstItem="NwL-yC-D3A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QjY-Zr-30H" secondAttribute="leading" id="uK2-oU-uyA"/>
                             <constraint firstItem="QjY-Zr-30H" firstAttribute="bottom" secondItem="sae-xJ-Apo" secondAttribute="bottom" constant="30" id="wA0-NQ-AuF"/>
-                            <constraint firstItem="L6c-uK-mnH" firstAttribute="centerX" secondItem="2ju-YP-q79" secondAttribute="centerX" id="yIu-bb-hzr"/>
                             <constraint firstItem="Vhv-P6-BvR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QjY-Zr-30H" secondAttribute="leading" id="yXt-Ka-c2T"/>
                             <constraint firstItem="QjY-Zr-30H" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NwL-yC-D3A" secondAttribute="trailing" id="yiP-pg-tjk"/>
                             <constraint firstItem="QjY-Zr-30H" firstAttribute="bottom" secondItem="V8x-Zk-Qbc" secondAttribute="bottom" id="zW7-eu-WAy"/>
@@ -276,7 +248,6 @@
                     <connections>
                         <outlet property="distanceLbl" destination="oZA-LP-UXd" id="SVW-lW-sqz"/>
                         <outlet property="durationLbl" destination="NwL-yC-D3A" id="iZt-GE-8fT"/>
-                        <outlet property="paceLbl" destination="9do-gc-RAB" id="pPS-1M-IZJ"/>
                         <outlet property="pauseBtn" destination="Ujt-qp-NG9" id="oYW-RC-Qaa"/>
                         <outlet property="sliderImage" destination="Rbb-J7-iNB" id="Z05-Xz-Obu"/>
                         <outlet property="swipeBGImage" destination="61W-hi-EeI" id="unW-Rk-QQP"/>
@@ -339,7 +310,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1Rw-Db-Jbl">
-                                                    <rect key="frame" x="354" y="16.5" width="60.5" height="37.5"/>
+                                                    <rect key="frame" x="157.5" y="16.5" width="60.5" height="37.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zf-ay-hSZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="60.5" height="23.5"/>
@@ -360,13 +331,13 @@
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06/15/17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13L-Xs-IIN">
-                                                    <rect key="frame" x="695" y="28" width="58" height="14"/>
+                                                    <rect key="frame" x="302" y="28" width="58" height="14"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-LO-VFp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
