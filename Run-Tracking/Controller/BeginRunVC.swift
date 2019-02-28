@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class BeginRunVC: LocationVC {
 
@@ -29,10 +30,6 @@ class BeginRunVC: LocationVC {
         locationManager?.delegate = self
         mapView.delegate = self
         locationManager?.startUpdatingLocation()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         setupMapView()
     }
     
@@ -42,12 +39,22 @@ class BeginRunVC: LocationVC {
     }
     
     @IBAction func locationCenterBtn(_ sender: UIButton) {
-        
+        centerMap()
     }
     
     @IBAction func closeBtn(_ sender: UIButton) {
         lastRunView.isHidden = true
+        if mapView.overlays.count > 0 {
+            mapView.removeOverlays(mapView.overlays)
+        }
     }
+    
+    func centerMap() {
+        mapView.userTrackingMode = .follow
+        let coordinateRegion = MKCoordinateRegion(center: mapView.userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+
     
     func addLastRunToMap() -> MKPolyline? {
         guard let lastRun = Run.getAllRuns()?.first else { return nil }
