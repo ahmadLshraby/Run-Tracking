@@ -20,16 +20,20 @@ class BeginRunVC: LocationVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationAuthStatus()
-        mapView.delegate = self
-        print("runs: \(Run.getAllRuns())")
+        
     }
 
     // let manager works in every time view will appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationManager?.delegate = self
+        mapView.delegate = self
         locationManager?.startUpdatingLocation()
-        getLastRun()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupMapView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -38,27 +42,38 @@ class BeginRunVC: LocationVC {
     }
     
     @IBAction func locationCenterBtn(_ sender: UIButton) {
+        
     }
     
     @IBAction func closeBtn(_ sender: UIButton) {
         lastRunView.isHidden = true
     }
     
-    func getLastRun() {
-        if let lastRun = Run.getAllRuns()?.first {
-            distanceLbl.text = "Distance: \(lastRun.distance)"
+    func addLastRunToMap() -> MKPolyline? {
+        guard let lastRun = Run.getAllRuns()?.first else { return nil }
+            distanceLbl.text = "Distance: \(lastRun.distance) m"
             durationLbl.text = "Duration: \(lastRun.duration.formatTimeDurationToString())"
-        }else {
-            lastRunView.isHidden = true
-            return
-            
-        }
-        
+            // As MKPolyline works with coordinates
+            var coordinates = [CLLocationCoordinate2D]()
+            for location in lastRun.locations {
+                coordinates.append(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                
+            }
+        return MKPolyline(coordinates: coordinates, count: lastRun.locations.count)
     }
     
-    
-    
-    
+    func setupMapView() {
+        if let overlay = addLastRunToMap() {
+            if mapView.overlays.count > 0 {
+                mapView.removeOverlays(mapView.overlays)
+            }
+            mapView.addOverlay(overlay)
+            lastRunView.isHidden = false
+        }else {
+            lastRunView.isHidden = true
+        }
+    }
+
     
 }
 
@@ -72,5 +87,13 @@ extension BeginRunVC: CLLocationManagerDelegate {
                 mapView.userTrackingMode = .follow
             }
         }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let polyline = overlay as! MKPolyline
+        let renderer = MKPolylineRenderer(polyline: polyline)
+        renderer.strokeColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+        renderer.lineWidth = 4
+        return renderer
+    }
 }
 
