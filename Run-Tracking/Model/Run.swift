@@ -32,5 +32,30 @@ class Run: Object {
         self.id = UUID().uuidString
     }
     
+    static func addRunToRealm(distance: Double, duration: Int) {
+        let run = Run(distance: distance, duration: duration)   // instance instaitiated from the model and takes the inputs from the func
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(run)
+                print("run saved")
+            }
+        }catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    static func getAllRuns() -> Results<Run>? {
+        do {
+            let realm = try Realm()
+            var runs = realm.objects(Run.self)
+            runs = runs.sorted(byKeyPath: "date", ascending: false)   // to get the last run first
+            return runs
+        }catch {
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+    
 
 }

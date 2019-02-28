@@ -17,6 +17,7 @@ class BeginRunVC: LocationVC {
         super.viewDidLoad()
         checkLocationAuthStatus()
         mapView.delegate = self
+        print("runs: \(Run.getAllRuns())")
     }
 
     // let manager works in every time view will appear

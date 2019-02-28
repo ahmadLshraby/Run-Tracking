@@ -22,8 +22,8 @@ class CurrentRunVC: LocationVC {
     var lastLocation: CLLocation!
     var timer = Timer()
     
-    var runDistance: Double = 0.0
-    var counter: Int = 0
+    var runDistance: Double = 0.0   // for distance
+    var counter: Int = 0    // for duration
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,7 @@ class CurrentRunVC: LocationVC {
     func endRun() {
         locationManager?.stopUpdatingLocation()
         // add to Realm
+        Run.addRunToRealm(distance: runDistance, duration: counter)
     }
     
     func startTimer() {
