@@ -49,7 +49,7 @@ class Run: Object {
         do {
             let realm = try Realm()
             var runs = realm.objects(Run.self)
-            runs = runs.sorted(byKeyPath: "date", ascending: false)   // to get the last run first
+            runs = runs.sorted(byKeyPath: "date", ascending: false)   // to get the last run by date be in the first 
             return runs
         }catch {
             print(error.localizedDescription)

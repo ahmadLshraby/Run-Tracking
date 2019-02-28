@@ -25,3 +25,16 @@ extension Int {
         }
     }
 }
+
+extension NSDate {
+    // to get day/month/year instead off year/month/day - time - zone
+    // call it in the cell
+    func getDateString() -> String {
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: self as Date)
+        let month = calendar.component(.month, from: self as Date)
+        let year = calendar.component(.year, from: self as Date)
+        
+        return "\(day)/\(month)/\(year)"
+    }
+}

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		041A534422272FBB00302120 /* Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A534322272FBB00302120 /* Ext.swift */; };
 		041A5346222752C200302120 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A5345222752C200302120 /* Run.swift */; };
+		041A53482227620000302120 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A53472227620000302120 /* RunLogCell.swift */; };
 		04C4CEDE2226449700371510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CEDD2226449700371510 /* AppDelegate.swift */; };
 		04C4CEE02226449700371510 /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CEDF2226449700371510 /* BeginRunVC.swift */; };
 		04C4CEE22226449700371510 /* RunLogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4CEE12226449700371510 /* RunLogVC.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		041A534322272FBB00302120 /* Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.swift; sourceTree = "<group>"; };
 		041A5345222752C200302120 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		041A53472227620000302120 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 		04C4CEDA2226449700371510 /* Run-Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run-Tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C4CEDD2226449700371510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C4CEDF2226449700371510 /* BeginRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginRunVC.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		04C4CEF2222644CF00371510 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				041A53472227620000302120 /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				04C4CEF92226706400371510 /* LocationVC.swift in Sources */,
 				04C4CEE22226449700371510 /* RunLogVC.swift in Sources */,
+				041A53482227620000302120 /* RunLogCell.swift in Sources */,
 				04C4CEDE2226449700371510 /* AppDelegate.swift in Sources */,
 				04C4CEF722266D1900371510 /* CurrentRunVC.swift in Sources */,
 				04C4CEE02226449700371510 /* BeginRunVC.swift in Sources */,
