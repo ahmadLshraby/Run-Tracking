@@ -15,6 +15,9 @@ class Run: Object {
     @objc dynamic var duration: Int = 0
     @objc dynamic var date = NSDate()
     @objc dynamic var id: String = ""
+    // add Location model in a list (array in Realm) to keep tracking every location coordinates when running
+    // every single Run or every id has a List<Location>
+   public private(set) var locations = List<Location>()
     
     override class func primaryKey() -> String {
         return "id"
@@ -24,18 +27,19 @@ class Run: Object {
         return ["duration", "date"]
     }
     
-    convenience init(distance: Double, duration: Int) {
+    convenience init(distance: Double, duration: Int, locations: List<Location>) {
         self.init()
         self.distance = distance
         self.duration = duration
         self.date = NSDate()
         self.id = UUID().uuidString
+        self.locations = locations
     }
     
-    static func addRunToRealm(distance: Double, duration: Int) {
-        let run = Run(distance: distance, duration: duration)   // instance instaitiated from the model and takes the inputs from the func
+    static func addRunToRealm(distance: Double, duration: Int, locations: List<Location>) {
+        let run = Run(distance: distance, duration: duration, locations: locations)   // instance instaitiated from the model and takes the inputs from the func
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: RealmConfig.runDataConfig)   // instead of Realm() which is default configuration
             try realm.write {
                 realm.add(run)
                 print("run saved")
@@ -47,7 +51,7 @@ class Run: Object {
     
     static func getAllRuns() -> Results<Run>? {
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: RealmConfig.runDataConfig)   // instead of Realm() which is default configuration
             var runs = realm.objects(Run.self)
             runs = runs.sorted(byKeyPath: "date", ascending: false)   // to get the last run by date be in the first 
             return runs
