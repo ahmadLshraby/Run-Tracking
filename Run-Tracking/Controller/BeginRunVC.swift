@@ -57,6 +57,7 @@ class BeginRunVC: LocationVC {
 
     
     func addLastRunToMap() -> MKPolyline? {
+        // get the last run from Realm Run model
         guard let lastRun = Run.getAllRuns()?.first else { return nil }
             distanceLbl.text = "Distance: \(lastRun.distance) m"
             durationLbl.text = "Duration: \(lastRun.duration.formatTimeDurationToString())"

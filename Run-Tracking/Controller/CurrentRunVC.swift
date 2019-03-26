@@ -15,7 +15,6 @@ class CurrentRunVC: LocationVC {
     @IBOutlet weak var swipeBGImage: UIImageView!
     @IBOutlet weak var sliderImage: UIImageView!
     @IBOutlet weak var durationLbl: UILabel!
-    @IBOutlet weak var paceLbl: UILabel!
     @IBOutlet weak var distanceLbl: UILabel!
     @IBOutlet weak var pauseBtn: UIButton!
     

@@ -7,8 +7,11 @@
 //
 
 import UIKit
-let run = Run.getAllRuns()
+
 class RunLogVC: UIViewController {
+    
+    let run = Run.getAllRuns()
+
 
     @IBOutlet weak var tableView: UITableView!
     
